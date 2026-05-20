@@ -1,3 +1,6 @@
+// 전체적인 복습
+// 컴포넌트,props,이벤트
+
 import { useState } from "react"
 
 function UserList(props) {
@@ -28,6 +31,9 @@ function SubjectList(props) {
                 </tr>
             })}
         </table>
+         <SubjectArray list={list} onSubInfo={(subName, bookName)=>{
+            alert(subName + "책 이름은 " + bookName + " 입니다!");
+        }}></SubjectArray>
     </>
 }
 
@@ -60,7 +66,8 @@ function App() {
             }}>초기화</button>
         </div>
         <hr></hr>
-        {menu == "user" ? <UserList list={users}></UserList> : menu == "subject" ? <SubjectList list={subjects}></SubjectList> : null}
+        {menu == "user" ?
+         <UserList list={users}></UserList> : menu == "subject" ? <SubjectList list={subjects}></SubjectList> : null}
     </>
 }
 
