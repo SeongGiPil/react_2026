@@ -1,19 +1,18 @@
-import '../App.css';
 
 function SubjectArray(props){
-    return(
-    <>
+    return <>
         <ul>
-        {
-            
-        }
-    </ul>
-    
+            {props.list.map(item => {
+                return <li>
+                    <a href="/" onClick={ e => {
+                        e.preventDefault();
+                        props.onSubInfo(item.subName, item.bookName);
+                    }}>{item.subName}</a>
+                </li>
+            })}
+        </ul>
     </>
-
-)
 }
-
 
 function App(){
     let list = [
@@ -28,3 +27,4 @@ function App(){
         }}></SubjectArray>
     </>
 }
+export default App;
