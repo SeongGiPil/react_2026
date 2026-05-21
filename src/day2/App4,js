@@ -1,0 +1,27 @@
+//복습4 useState문제
+
+import { useState } from "react";
+
+function App(){
+      let [Num,setNum] = useState(1);
+      letdecreaseNum=()=>{
+        if(num>0){
+            setNum(-1)
+        }
+      }
+
+    return<>
+    {/*텍스트 출력->숫자변수가 5이상이면 '큰수',아니면 '작은수'출력*/}
+    {num>=5?"큰수":"작은수"}
+    <hr></hr>
+    {/* 숫자변수-버튼클릭시 1씩증가*/}<button>증가</button>
+     <button onClick={()=>{
+        setNum(num+1);
+     }}>증가</button>
+     
+     
+       {/* 숫자변수-버튼클릭시 1씩감소*/}<button>감소</button>
+    
+    </>
+}
+export default App;
