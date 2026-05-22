@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './day2/App11';
+import AppRouter from './AppRouter';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
-    <App />
- 
+  
+  <AppRouter />
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
