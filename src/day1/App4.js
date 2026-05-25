@@ -1,22 +1,22 @@
 import { useState } from "react";
 
-//useState실습1
+// useState 실습 1
 function App(){
-   let varNum=1;
-    let[stateNum,setNum]=useState(1);
-    return<>
-    {varNum}
-    //함수만들어, 함수내부에서 num을 1씩증가
-    <button onClick={()=>{
-        Num++;
-        console.log(num);
-    }}>클릭!</button>
-    <hr></hr>
-    {num}
-    <button onClick={()=>{
-        setNum(Num+1);
-    }}>클릭22</button>
+    let varNum = 1;
+    let [stateNum, setNum] = useState(1);
 
+    return <>
+        {varNum}
+        <button onClick={()=>{
+            varNum++;
+            console.log(varNum);
+        }}>클릭!</button>
+        <hr></hr>
+        {stateNum}
+        <button onClick={()=>{
+            setNum(stateNum+1);
+        }}>클릭22</button>
     </>
 }
-export default App();
+
+export default App;
