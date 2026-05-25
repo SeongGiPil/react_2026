@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 function Test(){
 
     // 일반 변수
-    // 렌더링될 때마다 다시 1로 초기화됨
+    // 렌더링될 때마다 다시 초기화됨
     let varNum = 1;
 
 
@@ -17,11 +17,11 @@ function Test(){
 
 
     // ref 변수
-    // 값은 유지되지만 화면 자동 렌더링 X
+    // 값은 유지되지만 화면 자동 렌더링은 안됨
     let refNum = useRef(1);
 
 
-    // input 태그 연결용 ref
+    // input 연결용 ref
     let nameRef = useRef("");
 
 
@@ -32,19 +32,16 @@ function Test(){
 
         <div>stateNum : {stateNum}</div>
 
-        {/* ref 값은 current 안에 저장 */}
         <div>refNum : {refNum.current}</div>
+
 
         <hr></hr>
 
 
-        {/* 
-            일반 변수 증가
-            화면은 다시 렌더링되지 않음
-        */}
+        {/* 일반 변수 증가 */}
         <button onClick={()=>{
 
-            varNum += 1
+            varNum += 1;
 
         }}>
 
@@ -54,13 +51,10 @@ function Test(){
 
 
 
-        {/* 
-            state 값 증가
-            React가 다시 렌더링함
-        */}
+        {/* state 값 증가 */}
         <button onClick={()=>{
 
-            setNum(stateNum+1)
+            setNum(stateNum + 1);
 
         }}>
 
@@ -70,13 +64,10 @@ function Test(){
 
 
 
-        {/* 
-            ref 값 증가
-            값은 유지되지만 화면은 자동 갱신 안됨
-        */}
+        {/* ref 값 증가 */}
         <button onClick={()=>{
 
-            refNum.current += 1
+            refNum.current += 1;
 
         }}>
 
@@ -85,21 +76,21 @@ function Test(){
         </button>
 
 
+
         <hr></hr>
 
 
 
-        {/* input 태그와 ref 연결 */}
+        {/* input과 ref 연결 */}
         <input ref={nameRef}></input>
 
 
         <button onClick={()=>{
 
-            // input에 입력한 값 출력
+            // 입력값 출력
             console.log(nameRef.current.value);
 
-
-            // 다시 input에 focus
+            // 다시 input focus
             nameRef.current.focus();
 
         }}>
@@ -107,6 +98,7 @@ function Test(){
             inputRef
 
         </button>
+
     </>
 }
 

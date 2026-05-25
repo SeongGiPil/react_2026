@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // useRef : input 값 가져오기
 import { useRef } from "react";
 
@@ -110,3 +111,6 @@ function ProductAdd(){
 }
 
 export default ProductAdd;
+
+
+
